@@ -1,0 +1,7 @@
+build
+.metals
+.cache
+.vscode
+.VSCodeCounter
+test_procise
+.DS_Store

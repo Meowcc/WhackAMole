@@ -1,0 +1,10 @@
+`define H_FRONT_PORCH 16
+`define H_SYNC_PULSE 96
+`define H_BACK_PORCH 48
+`define H_ACTIVE 640
+`define H_TOTAL 800
+`define V_FRONT_PORCH 10
+`define V_SYNC_PULSE 2
+`define V_BACK_PORCH 33
+`define V_ACTIVE 480
+`define V_TOTAL 525
