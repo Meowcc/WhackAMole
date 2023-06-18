@@ -72,18 +72,18 @@ module control (
             ROUND_CONFIG: begin
                 case (round_level) 
                     2'd0: begin
-                        interval = 27'd12500000; // Mult10 when on-board
-                        duration = 27'd10000000;
+                        interval = 27'd125000000; // Mult10 when on-board
+                        duration = 27'd100000000;
                         molenum = 3'd4;
                     end
                     2'd1: begin
-                        interval = 27'd10000000;
-                        duration = 27'd7500000;
+                        interval = 27'd100000000;
+                        duration = 27'd75000000;
                         molenum = 3'd6;
                     end
                     2'd2: begin
-                        interval = 27'd7500000;
-                        duration = 27'd5000000;
+                        interval = 27'd75000000;
+                        duration = 27'd50000000;
                         molenum = 3'd6;
                     end
                     default: begin
