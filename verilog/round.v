@@ -18,12 +18,12 @@ module round
 
 reg [2:0] mole_count;
 
-localparam IDLE = 3'd0;
-localparam MOLE_INTERVAL = 3'd1;
-localparam MOLE_APPEAR = 3'd2;
+localparam IDLE = 2'd0;
+localparam MOLE_INTERVAL = 2'd1;
+localparam MOLE_APPEAR = 2'd2;
 
-reg [2:0] cur_state;
-reg [2:0] next_state;
+reg [1:0] cur_state;
+reg [1:0] next_state;
 
 reg [26:0] interval_counter;
 reg [26:0] duration_counter;
@@ -156,4 +156,5 @@ always @(posedge clk) begin
 end
 
 assign hit_success = has_hit && !has_hit_regnext;
+
 endmodule
