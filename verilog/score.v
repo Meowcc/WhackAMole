@@ -50,7 +50,7 @@ module score
     single_number #(
         .H_POS(H_POS + 10'd60),
         .V_POS(V_POS),
-        .COLOR(24'hff0000)
+        .COLOR(24'hed5a65)
     ) score0 (
         .number(scores[0]),
         .hcounter(hcounter),
@@ -62,7 +62,7 @@ module score
     single_number #(
         .H_POS(H_POS),
         .V_POS(V_POS),
-        .COLOR(24'hff0000)
+        .COLOR(24'hed5a65)
     ) score1 (
         .number(scores[1]),
         .hcounter(hcounter),

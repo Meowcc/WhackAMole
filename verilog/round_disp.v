@@ -1,6 +1,6 @@
 module round_disp
 #(
-    parameter H_POS = 10'd40,
+    parameter H_POS = 10'd60,
     parameter V_POS = 10'd80
 )
 (
@@ -14,7 +14,7 @@ module round_disp
     single_number #(
         .H_POS(H_POS),
         .V_POS(V_POS),
-        .COLOR(24'h00ff00)
+        .COLOR(24'hfba414)
     ) round0 (
         .number({2'b0, round}),
         .hcounter(hcounter),

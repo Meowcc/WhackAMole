@@ -92,7 +92,7 @@ module top(
     wire round_visible;
     wire [23:0] round_rgb;
 
-    round_disp #(10'd40, 10'd80)
+    round_disp #(10'd60, 10'd80)
     round_disp_inst(
         .round(round_level),
         .hcounter(hcounter),
