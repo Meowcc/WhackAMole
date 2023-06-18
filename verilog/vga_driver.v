@@ -47,9 +47,9 @@ module vga_driver(
             vsync <= 1'b1;
         end
         if (hcounter == `H_ACTIVE + `H_FRONT_PORCH - 1) begin
-            hsync <= 1'b1;
-        end else if (hcounter == `H_ACTIVE + `H_FRONT_PORCH + `H_SYNC_PULSE - 1) begin
             hsync <= 1'b0;
+        end else if (hcounter == `H_ACTIVE + `H_FRONT_PORCH + `H_SYNC_PULSE - 1) begin
+            hsync <= 1'b1;
         end else begin
             hsync <= hsync;
         end
@@ -60,9 +60,9 @@ module vga_driver(
             vsync <= 1'b1;
         end
         if (vcounter == `V_ACTIVE + `V_FRONT_PORCH - 1) begin
-            vsync <= 1'b1;
-        end else if (vcounter == `V_ACTIVE + `V_FRONT_PORCH + `V_SYNC_PULSE - 1) begin
             vsync <= 1'b0;
+        end else if (vcounter == `V_ACTIVE + `V_FRONT_PORCH + `V_SYNC_PULSE - 1) begin
+            vsync <= 1'b1;
         end else begin
             vsync <= vsync;
         end
