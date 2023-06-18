@@ -146,5 +146,14 @@ always @(posedge clk) begin
     end
 end
 
-assign hit_success = !has_hit && hit && (cur_state == MOLE_APPEAR);
+reg has_hit_regnext;
+always @(posedge clk) begin
+    if (rst) begin
+        has_hit_regnext <= 1'b0;
+    end else begin
+        has_hit_regnext <= has_hit;
+    end
+end
+
+assign hit_success = has_hit && !has_hit_regnext;
 endmodule
