@@ -87,8 +87,8 @@ module control (
                         molenum = 3'd6;
                     end
                     default: begin
-                        interval = 27'0;
-                        duration = 27'0;
+                        interval = 27'd0;
+                        duration = 27'd0;
                         molenum = 3'd0;
                     end
                 endcase
