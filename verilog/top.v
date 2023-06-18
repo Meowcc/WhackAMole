@@ -101,9 +101,10 @@ module top(
         .rgb(round_rgb)
     );
 
+    wire [23:0] score_display_rgb;
     wire [23:0] layer3_rgb;
-    assign layer3_rgb = round_visible ? round_rgb : score_rgb;
-
+    assign score_display_rgb = game_over ? 24'd0 : score_rgb;
+    assign layer3_rgb = round_visible ? round_rgb : score_display_rgb;
 
     wire background;
     assign background = (hcounter < 640) && (vcounter < 480);

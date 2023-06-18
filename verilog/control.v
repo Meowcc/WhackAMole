@@ -19,10 +19,10 @@ module control (
     reg [2:0] hit_count;
 
     localparam IDLE = 3'd0;
-    localparam ROUND_CONFIG = 3'd2;
-    localparam ROUND_RUNNING = 3'd3;
-    localparam ROUND_OVER = 3'd4;
-    localparam GAME_OVER = 3'd5; 
+    localparam ROUND_CONFIG = 3'd1;
+    localparam ROUND_RUNNING = 3'd2;
+    localparam ROUND_OVER = 3'd3;
+    localparam GAME_OVER = 3'd4; 
 
     wire round_start;
     wire round_over;
@@ -103,7 +103,7 @@ module control (
             end
             ROUND_OVER: begin
                 if (round_level < total_rounds) begin
-                    if (hit_count >= 3'd0) begin
+                    if (hit_count >= 3'd3) begin
                         next_state = ROUND_CONFIG;
                     end else begin
                         next_state = GAME_OVER;
