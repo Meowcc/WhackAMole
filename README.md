@@ -1,2 +1,2 @@
-# Whack A Mole
+Whack A Mole
 ASIC 期末大作业
