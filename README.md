@@ -1,2 +1,1 @@
-Whack A Mole
-ASIC 期末大作业
+ASIC 期末作业
